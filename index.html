@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sync-Ready Checklist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Merriweather:ital,wght@1,300&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}
+/* Layout: one reading column, a handout you keep on your phone; numbered only where order is real */
+:root {
+  --bg: #F4F4FA; --surface: #FFFFFF; --fg: #16163C; --muted: #4A4C78; --line: #D6D8F0;
+  --accent: #3D37BD; --accent-soft: #E6E5FB; --italic: #3D37BD;
+  --display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --serif: 'Merriweather', Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0B0B12; --surface: #121226; --fg: #F2F2F8; --muted: #B4B7DE; --line: #2A2A4E;
+  --accent: #92A9EC; --accent-soft: #1C1C44; --italic: #B7B3F7; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0B0B12; --surface: #121226; --fg: #F2F2F8; --muted: #B4B7DE; --line: #2A2A4E;
+  --accent: #92A9EC; --accent-soft: #1C1C44; --italic: #B7B3F7; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--display); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 64px; display: flex; flex-direction: column; gap: 48px; }
+header { display: flex; flex-direction: column; gap: 10px; }
+.eyebrow { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: clamp(36px, 8vw, 56px); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 em { display: block; font-family: var(--serif); font-weight: 300; font-style: italic; color: var(--italic); font-size: .82em; line-height: 1.3; }
+.lede { color: var(--muted); max-width: 60ch; margin: 0; }
+section { display: flex; flex-direction: column; gap: 16px; }
+h2 { font-size: 24px; font-weight: 500; margin: 0; padding-bottom: 10px; border-bottom: 1px solid var(--line); text-wrap: balance; }
+h2 small { display: block; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 16px; color: var(--muted); margin-top: 2px; }
+ol, ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.check li { display: grid; grid-template-columns: 2.2em 1fr; gap: 4px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 18px; }
+.check .n { font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 600; grid-row: span 2; }
+.check b { font-weight: 600; }
+.check p { margin: 0; color: var(--muted); grid-column: 2; }
+.gloss { font-size: 15px; color: var(--muted); margin: 0; }
+.gloss b { color: var(--fg); font-weight: 600; }
+.rows li { display: grid; grid-template-columns: minmax(0, 13em) minmax(0, 1fr); gap: 4px 20px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.rows li:last-child { border-bottom: 0; }
+.rows b { font-weight: 600; }
+.rows span { color: var(--muted); }
+.note { background: var(--accent-soft); border-radius: 6px; padding: 14px 18px; margin: 0; }
+.links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; }
+.links li { display: flex; flex-direction: column; min-width: 0; }
+.links span { color: var(--muted); font-size: 15px; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+h3 { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 8px 0 0; }
+.books li i { font-family: var(--serif); font-weight: 300; }
+.books li span { display: block; color: var(--muted); font-size: 15px; }
+footer { border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); font-size: 15px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+footer b { color: var(--fg); font-weight: 500; }
+@media (max-width: 560px) {
+  .rows li { grid-template-columns: 1fr; }
+  .links { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Berklee Valencia · Artist Management · 14 October 2026</p>
+    <h1>Sync-ready <em>an artist manager's checklist</em></h1>
+    <p class="lede">Everything from today's session in one place: what sync-ready means, who does what, the tools we looked at, where to check the data, and what to read next.</p>
+  </header>
+
+  <section>
+    <h2>Four things true for every song <small>if any one is missing, the answer can't be yes, fast</small></h2>
+    <ul class="check">
+      <li><span class="n">✓</span><b>Splits are agreed</b><p>Every writer and producer agrees and signs their share in advance. It's clear who owns and collects for the master and for the song. Samples are cleared.</p></li>
+      <li><span class="n">✓</span><b>Registered, 100%</b><p>Every share is registered with each writer's society, adds up to 100% and matches. ISWC and ISRC are in place before release.</p></li>
+      <li><span class="n">✓</span><b>Assets are ready</b><p>WAV master, instrumental, stems, clean edit, short cutdowns and lyrics, ready to send in minutes.</p></li>
+      <li><span class="n">✓</span><b>Yes is fast</b><p>One contact who answers. The artist's approval rules agreed in advance. A sense of the price.</p></li>
+    </ul>
+    <p class="gloss"><b>ISRC</b> recording ID · <b>ISWC</b> song ID · <b>IPI</b> writer ID · <b>PRO</b> performing rights organisation, the collecting society (SGAE in Spain, for example)</p>
+  </section>
+
+  <section>
+    <h2>What supervisors check first <small>the society databases, before anyone calls you</small></h2>
+    <ul class="rows">
+      <li><b>Not registered</b><span>Who owns it? Too risky to chase.</span></li>
+      <li><b>Doesn't add up to 100%</b><span>An uncleared sample? A missing writer?</span></li>
+      <li><b>Shares don't match</b><span>A dispute over splits? They move on.</span></li>
+    </ul>
+    <p class="note">You never hear about the syncs you lose this way. Look your artist's songs up the way a supervisor would.</p>
+  </section>
+
+  <section>
+    <h2>Who does what <small>in order; the manager doesn't do it all, but owns the outcome</small></h2>
+    <ol class="rows">
+      <li><b>1 · Contributors</b><span>Writers and producers agree the splits in advance.</span></li>
+      <li><b>2 · Manager</b><span>Makes sure everything is registered properly with the relevant parties.</span></li>
+      <li><b>3 · Sync agent</b><span>Pitches out and brings back the clearance request. Needs authority for every share.</span></li>
+      <li><b>4 · Label</b><span>Clears the master use and collects the master's share of the fee.</span></li>
+      <li><b>5 · Publisher</b><span>Clears the song and collects the publishing share of the fee.</span></li>
+    </ol>
+    <p class="gloss">Self-released and self-published? The artist may hold several of these roles. That can be an advantage: one-stop.</p>
+  </section>
+
+  <section>
+    <h2>Three habits <small>the same gaps that lose a sync also lose royalties</small></h2>
+    <ul class="rows">
+      <li><b>From the first session</b><span>Splits agreed in writing: every writer and producer's name, share, society, IPI and publisher.</span></li>
+      <li><b>Before release</b><span>Register, then release. Song registered, ISRC and ISWC linked, assets delivered with the master.</span></li>
+      <li><b>Every quarter</b><span>Audit the catalogue. Check what's actually registered and paid. Old songs are often the ones with gaps.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools from the session <small>tools I use, not endorsements; every category has alternatives</small></h2>
+    <ul class="links">
+      <li><a href="https://www.disco.ac">DISCO</a><span>Package and pitch a catalogue</span></li>
+      <li><a href="https://bridge.audio">Bridge Audio</a><span>Catalogue hosting, AI tagging, sync marketplace</span></li>
+      <li><a href="https://www.chordal.com">Chordal</a><span>Pre-clearance across co-owners, one payment</span></li>
+      <li><a href="https://cyanite.ai">Cyanite</a><span>AI tagging, brief and sounds-like search</span></li>
+      <li><a href="https://www.aimsapi.com">AIMS API</a><span>AI tagging and music search</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Check the data <small>where ownership is looked up</small></h2>
+    <ul class="links">
+      <li><a href="https://repertoire.bmi.com">Songview</a><span>ASCAP, BMI, SESAC and GMR works, USA</span></li>
+      <li><a href="https://portal.themlc.com/search">The MLC Public Search</a><span>US mechanical rights data</span></li>
+      <li><a href="https://iswcnet.cisac.org">CISAC ISWC Network</a><span>Global song IDs and their writers</span></li>
+      <li><a href="https://www.cisac.org">CISAC</a><span>Find any country's society</span></li>
+    </ul>
+    <h3>Your artist's own society too</h3>
+    <ul class="links">
+      <li><a href="https://www.sgae.es">SGAE</a><span>Spain</span></li>
+      <li><a href="https://www.prsformusic.com">PRS for Music</a><span>UK</span></li>
+      <li><a href="https://www.sacem.fr">SACEM</a><span>France</span></li>
+      <li><a href="https://www.gema.de">GEMA</a><span>Germany</span></li>
+      <li><a href="https://www.jasrac.or.jp">JASRAC</a><span>Japan</span></li>
+      <li><a href="https://www.komca.or.kr">KOMCA</a><span>South Korea</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Further reading</h2>
+    <h3>Books</h3>
+    <ul class="books">
+      <li><i>The Musician's Guide to Licensing Music</i><span>Darren Wilsey and Daylle Deanna Schwartz</span></li>
+      <li><i>Music Supervision</i><span>Ramsay Adams, David Hnatiuk and David Weiss</span></li>
+      <li><i>Thinking in Sync: A Primer on the Mind of a Music Supervisor</i><span>Amanda Krieg Thomas</span></li>
+      <li><i>All You Need to Know About the Music Business</i><span>Donald Passman</span></li>
+      <li><i>K-Pop: Popular Music, Cultural Amnesia, and Economic Innovation in South Korea</i><span>John Lie</span></li>
+    </ul>
+    <h3>Independent analysis and guides</h3>
+    <ul class="links">
+      <li><a href="https://www.waterandmusic.com">Water &amp; Music</a><span>Cherie Hu's music and tech research network</span></li>
+      <li><a href="https://themmf.net">Dissecting the Digital Dollar</a><span>Music Managers Forum guide to where the money goes</span></li>
+      <li><a href="https://musically.com">Music Ally</a><span>Music and tech news, worldwide</span></li>
+      <li><a href="https://www.musicbusinessworldwide.com">Music Business Worldwide</a><span>Industry news, deals and publishing</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <span><b>Andy Robinson</b> · andy@interstellarmusic.com</span>
+    <span>Make yes easy.</span>
+  </footer>
+</div>
+</body>
+</html>
